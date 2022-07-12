@@ -1,0 +1,92 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+	
+  <bean id="collectionBean" class="spring.core.beans.CollectionBean"> 
+    <!--  <property name="marks">
+        <list>
+           <value>75</value>
+           <value>85</value>
+           <value>95</value>      
+        </list> 
+    </property>
+    <property name="names">
+        <list>
+           <value>ram</value>
+           <value>sai</value>
+           <value>hari</value>      
+        </list> 
+    </property>
+  <property name="phones">
+        <set>
+           <value>12345</value>
+           <value>56789</value>
+           <value>23459</value>      
+        </set> 
+    </property>
+    <property name="capitals">
+        <map>
+           <entry>
+              <key><value>India</value></key>
+              <value>NewDelhi</value>
+           </entry>
+           <entry>
+              <key><value>Australia</value></key>
+              <value>Conberra</value>
+           </entry>
+       </map> 
+    </property>
+    
+     <property name="faculties">
+          <props>
+             <prop key="Nag">Java</prop>
+             <prop key="Vasu">.Net</prop>
+          </props>
+    
+    </property> -->
+    
+        <constructor-arg>
+         <list>
+           <value>35</value>
+           <value>45</value>
+           <value>55</value>      
+         </list>
+       </constructor-arg>
+       <constructor-arg>
+         <list>
+           <value>ram</value>
+           <value>sai</value>
+           <value>hari</value>     
+         </list>
+       </constructor-arg>
+       <constructor-arg>
+          <set>
+           <value>12345</value>
+           <value>56789</value>
+           <value>23459</value>      
+        </set> 
+       </constructor-arg>
+       <constructor-arg>
+          <map>
+           <entry>
+              <key><value>India</value></key>
+              <value>NewDelhi</value>
+           </entry>
+           <entry>
+              <key><value>Australia</value></key>
+              <value>Conberra</value>
+           </entry>
+         </map> 
+       </constructor-arg>
+       <constructor-arg>
+          <props>
+             <prop key="Nag">Java</prop>
+             <prop key="Vasu">.Net</prop>
+          </props>
+       </constructor-arg> 
+ 
+  </bean>
+
+</beans>

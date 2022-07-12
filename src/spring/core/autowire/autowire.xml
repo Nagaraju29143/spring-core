@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+	
+<bean id="bd" class="spring.core.autowire.CustomerBasicDetails">  
+     <property name="custName" value="ram" />
+     <property name="phoneNumber" value="9849227522" />
+     <property name="age" value="30" />
+     <property name="salary" value="25567.89" />
+</bean>
+<bean id="addr" class="spring.core.autowire.CustomerAddress">  
+     <property name="city" value="Hyderabad" />
+     <property name="state" value="Telangana" />
+     <property name="pinCode" value="500032" />
+</bean>
+
+
+<!-- <bean id="customer" class="spring.core.autowire.Customer" >  
+     <property name="custId" value="100" />
+     <property name="basicDetails" ref="bd" />
+     <property name="address" ref="addr" />
+</bean> -->
+
+
+<!-- <bean id="customer" class="spring.core.autowire.Customer" autowire="byName">  
+     <property name="custId" value="100" />
+</bean> -->
+<!-- <bean id="customer" class="spring.core.autowire.Customer" autowire="byType">  
+     <property name="custId" value="200" />
+</bean>  -->
+
+<!-- <bean id="customer" class="spring.core.autowire.Customer" >  
+      <constructor-arg value="300" />
+     <constructor-arg  ref="bd" />
+     <constructor-arg ref="addr" />
+</bean> -->
+
+<bean id="customer" class="spring.core.autowire.Customer" autowire="constructor">  
+     <constructor-arg  index="0" value="300" />
+</bean>
+
+</beans>
