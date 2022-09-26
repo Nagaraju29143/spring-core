@@ -1,5 +1,6 @@
 package spring.core.annotation.demo;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -8,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "spring.core.annotation")
 public class AppConfig {
 	
-	@Bean("cbd")
+	@Bean("bd")
 	CustomerBasicDetails getCustomerBasicDetails() {
 		CustomerBasicDetails cbd=new CustomerBasicDetails();
-		cbd.setCustName("ram");
+		cbd.setCustName("sai");
 		cbd.setPhoneNumber(123456789);
 		cbd.setAge(30);
 		cbd.setSalary(25567.89);
@@ -20,8 +21,8 @@ public class AppConfig {
 		
 	}
 	
-	@Bean("current")
-	//@Qualifier("current")
+	@Bean("cur")
+	@Qualifier("current")
 	CustomerAddress getCurrentAddress() {
 		
 		CustomerAddress ca=new CustomerAddress("Hyderabad","Telangana",500032);
@@ -29,14 +30,24 @@ public class AppConfig {
 		return ca;
 	}
 	
-	@Bean("perminent")
-	//@Qualifier("perminent")
+	@Bean("per")
+	@Qualifier("perminent")
 	CustomerAddress getPerminentAddress() {
 		
 		CustomerAddress pa=new CustomerAddress("Vizag","Andhrapradesh",535006);
 		
 		return pa;
 	}
+	
+	/*@Bean("customer")
+	Customer getCustomer(CustomerBasicDetails bd,CustomerAddress cur) {
+		
+		Customer cust=new Customer();
+		cust.setBasicDetails(bd);
+		cust.setAddress(cur);
+		
+		return cust;
+	}*/
 	
 	
 

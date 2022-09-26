@@ -2,13 +2,12 @@ package spring.core.annotation.demo;
 
 import javax.annotation.Resource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-@Component
+ @Component
 //@Controller
 //@Service
 //@Repository
@@ -16,12 +15,16 @@ import org.springframework.stereotype.Component;
 @PropertySource("classpath:database.properties")
 public class Customer {
 	
-	@Autowired	
+	//@Autowired	//defualt byType mode
+	 @Resource
 	private CustomerBasicDetails basicDetails;
 	
+	/* @Autowired        //byType>byQualifier>byName
+	 @Qualifier("perminent")*/
 	@Resource
-	@Qualifier("perminent")
+	@Qualifier("cur") //byName>byType>byQualifier
 	private CustomerAddress address;
+	
 	
 	@Value("${db.postgre.url}")
 	private String postgredbUrl;
@@ -37,20 +40,21 @@ public class Customer {
 	//for constructor injection
 	 
 	
-	
-   public Customer(CustomerBasicDetails basicDetails,  CustomerAddress address) {
+	//@Autowired
+  // public Customer(CustomerBasicDetails basicDetails, @Qualifier("perminent") CustomerAddress address) {
+	 public Customer(CustomerBasicDetails basicDetails, CustomerAddress address) {
 		System.out.println("Customer Bean Instantiated using parameterized constructor");
 		this.basicDetails = basicDetails;
 		this.address = address;
 	}
 	
 	//for setter injection
-	
-	public void setBasicDetails(CustomerBasicDetails basicDetails) {
+   // @Autowired
+   public void setBasicDetails(CustomerBasicDetails basicDetails) {
 		this.basicDetails = basicDetails;
 	}
 	
-	
+   // @Autowired
 	public void setAddress(CustomerAddress address) {
 		this.address = address;
 	}
@@ -61,13 +65,6 @@ public class Customer {
 		return "Customer [basicDetails=" + basicDetails + ", address=" + address + "]";
 	}
 	 
-	/*@PropertySource("classpath:database.properties")
 	
-	@Value("${db.postgre.url}")
-	private String postgredbUrl;
-	
-	public String getPostgredbUrl() {
-	    return postgredbUrl;
-	  }*/
 
 }

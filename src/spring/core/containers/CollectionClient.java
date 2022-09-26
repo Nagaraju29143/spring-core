@@ -20,21 +20,21 @@ public class CollectionClient {
 		
 		int[] marks=collectionBean.getMarks();
 		
-		System.out.println(Arrays.toString(marks));
+		System.out.println("Marks: "+Arrays.toString(marks));
 		
 		List names=collectionBean.getNames();
-		System.out.println(names);
+		System.out.println("Names: "+names);
 		
 		
 		
 		Set phones=collectionBean.getPhones();
-		System.out.println(phones);
+		System.out.println("PhNos: "+phones);
 		
 		Map capitals=collectionBean.getCapitals();
-		System.out.println(capitals);
+		System.out.println("Capitals: "+capitals);
 		
 		Properties faculty=collectionBean.getFaculties();
-		System.out.println(faculty);
+		System.out.println("Faculty: "+faculty);
 		
 	}
 

@@ -15,14 +15,14 @@ public class AnnotationClient {
 		
 		System.out.println(cust.getPostgredbUrl());
 		
-		CustomerBasicDetails cbd=(CustomerBasicDetails)applicationContext.getBean("cbd");
+		/*CustomerBasicDetails cbd=(CustomerBasicDetails)applicationContext.getBean("bd");
 		System.out.println(cbd);
 		
 		CustomerAddress ca=(CustomerAddress)applicationContext.getBean("current");
 		System.out.println(ca);
 		
 		CustomerAddress pa=(CustomerAddress)applicationContext.getBean("perminent");
-		System.out.println(pa);
+		System.out.println(pa);*/
 	}
 
 }

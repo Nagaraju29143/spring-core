@@ -7,14 +7,19 @@ public class Customer {
 	
 	
 	
+	  public Customer() {
+	  
+	  }
+	 
 	//for constructor injection
 
-	public Customer(int custId, CustomerBasicDetails basicDetails,CustomerAddress address) {
-		System.out.println("Customer Bean Instantiated using parameterized constructor");
-		this.custId = custId;
-		this.basicDetails = basicDetails;
-		this.address = address;
-	}
+	
+	  public Customer(int custId, CustomerBasicDetails basicDetails,CustomerAddress
+	  address) { System.out.
+	  println("Customer Bean Instantiated using parameterized constructor");
+	  this.custId = custId; this.basicDetails = basicDetails; this.address =
+	  address; }
+	 
 	
 	//for setter injection
 	

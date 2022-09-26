@@ -4,22 +4,20 @@
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
 	xmlns:context="http://www.springframework.org/schema/context">
 	
-  <bean id="cust" class="spring.core.beans.Customer" >
-    <property name="name" value="ram" />
+   <bean id="cust" class="spring.core.beans.Customer">
+   
+<!--     <property name="name" value="ram" />
     <property name="age" value="28" />
-    <property name="salary" value="1000.50"/> 
-    
-    <constructor-arg name="name" value="test" />
-    <constructor-arg name="age" value="25" />
-    <constructor-arg  value="200.50"/>  
-    
-    <!-- <constructor-arg value="20"  index="1"/>
-    <constructor-arg value="test" index="0"/>
-    <constructor-arg value="1000.30" index="2"/> -->
-    
+    <property name="salary" value="1000.50"/>   -->
+     
+    <constructor-arg  value="25" index="1"/>
+    <constructor-arg  value="test" index="0"/>
+    <constructor-arg  value="200.50" index="2"/> 
      
   </bean>
   
-
-
+  <bean id="emp" class="spring.core.beans.Employee" scope="prototype">
+  
+  </bean>
+  
 </beans>

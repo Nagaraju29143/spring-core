@@ -5,15 +5,15 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 public class Employee implements ApplicationContextAware{
-	
+//public class Employee	{
 	//primitive types
 	private int empId;
 	private String  empName;
 	
-	//reference type
+	//reference type/custom type
 	private Address address;
 	
-	private ApplicationContext ac;
+   private ApplicationContext ac;
 	
 	@Override
 	public void setApplicationContext(ApplicationContext arg0) throws BeansException {
@@ -37,9 +37,12 @@ public class Employee implements ApplicationContextAware{
 	}
     
 	public Address getAddress() {
+		
+		//return address;
 		return ac.getBean(Address.class);
 	}
 
+	
 	public void setAddress(Address address) {
 		this.address = address;
 	}

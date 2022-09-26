@@ -13,7 +13,9 @@ public class CollectionBean {
 	Map capitals;
 	Properties faculties;
 
-
+	public CollectionBean(){
+		
+	}
 	public CollectionBean(int[] marks, List names, Set phones, Map capitals, Properties faculties) {
 		System.out.println("CollectionBean Instantiated using parametarized constructor");
 		this.marks = marks;

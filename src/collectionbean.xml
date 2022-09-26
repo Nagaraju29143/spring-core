@@ -5,21 +5,21 @@
 	xmlns:context="http://www.springframework.org/schema/context">
 	
   <bean id="collectionBean" class="spring.core.beans.CollectionBean"> 
-    <!--  <property name="marks">
+     <!-- <property name="marks">
         <list>
            <value>75</value>
            <value>85</value>
            <value>95</value>      
         </list> 
     </property>
-    <property name="names">
+     <property name="names">
         <list>
            <value>ram</value>
            <value>sai</value>
            <value>hari</value>      
         </list> 
     </property>
-  <property name="phones">
+   <property name="phones">
         <set>
            <value>12345</value>
            <value>56789</value>
@@ -37,7 +37,7 @@
               <value>Conberra</value>
            </entry>
        </map> 
-    </property>
+    </property> 
     
      <property name="faculties">
           <props>
@@ -47,7 +47,7 @@
     
     </property> -->
     
-        <constructor-arg>
+      <constructor-arg>
          <list>
            <value>35</value>
            <value>45</value>

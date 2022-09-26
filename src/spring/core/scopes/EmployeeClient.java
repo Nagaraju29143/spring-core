@@ -30,13 +30,16 @@ public static void main(String[] args) {
 		System.out.println(a3==a4);*/
 		
 		
-		Employee employee1=(Employee)applicationContext.getBean("emp");
+	    Employee employee1=(Employee)applicationContext.getBean("emp");
 		Address address1=employee1.getAddress();
 		
 		Employee employee2=(Employee)applicationContext.getBean("emp");
 		Address address2=employee2.getAddress();
 		
+		System.out.println(employee1==employee1);
+		
 		System.out.println(address1==address2);
+		
 		
 	}
 }
